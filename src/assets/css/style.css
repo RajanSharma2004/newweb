@@ -2768,7 +2768,7 @@ ul.blog_pagination li a:hover {
 }
 
 .single-side-bar ul li a:hover {
-    color: #fff opacity: 1;
+    /* color: #fff opacity: 1; */
 }
 
 .single-blog-social-icon {

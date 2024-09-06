@@ -10,8 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@remixicon/react": "^4.2.0",
     "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "framer-motion": "^11.3.24",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -19,6 +23,7 @@
     "react-router": "^6.26.0",
     "react-router-dom": "^6.26.0",
     "react-slick": "^0.30.2",
+    "remixicon": "^4.3.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.9"
   },

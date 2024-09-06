@@ -8,7 +8,9 @@ import partner2 from "../../assets/images/client-logos/partner2.png"
 import partner3 from "../../assets/images/client-logos/partner3.png"
 import partner4 from "../../assets/images/client-logos/partner4.png"
 import partner5 from "../../assets/images/client-logos/partner5.png"
+import partner6 from "../../assets/images/client-logos/partner6.png"
 import SlideUp from '../../utlits/animations/slideUp';
+
 
 const Hero = () => {
     return (
@@ -20,14 +22,14 @@ const Hero = () => {
                         <SlideUp>
                             <div className="about-image-part">
                                 <img src={profile} alt="About Me" />
-                                <h2>Bentos Walker</h2>
-                                <p>I am a Web Designer based in san francisco.</p>
+                                <h2>Rajan Sharma</h2>
+                                <p>I am a Brand Identity and UI/UX Designer</p>
                                 <div className="about-social text-center">
                                     <ul>
-                                        <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li>
-                                        <li><Link to=""><RiTwitterXLine size={20} /></Link></li>
-                                        <li><Link to=""><RiLinkedinFill size={20} /></Link></li>
-                                        <li><Link to=""><RiGithubLine size={20} /></Link></li>
+                                        {/* <li><Link to=""><RiFacebookCircleFill size={20} /></Link></li> */}
+                                        {/* <li><Link to=""><RiTwitterXLine size={20} /></Link></li> */}
+                                        <li><Link to="https://www.linkedin.com/in/rajan-sharma-8a7b002a5/"><RiLinkedinFill size={20} /></Link></li>
+                                        {/* <li ><Link to=""></Link></li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -40,7 +42,7 @@ const Hero = () => {
                             <div className="about-content-part">
                                 <p>Hello There!</p>
                                 <h2>
-                                    I’m Bentos Walker, a product designer crafting user-centric design with pixel-perfect precision.
+                                    I’m Rajan Sharma, a Brand Identity and UI/UX designer crafting user-centric design with pixel-perfect precision.
                                 </h2>
                                 <div className="adress-field">
                                     <ul>
@@ -64,7 +66,8 @@ const Hero = () => {
                                                 <img src={partner3} alt="" />
                                                 <img src={partner4} alt="" />
                                                 <img src={partner5} alt="" />
-                                                <img src={partner1} alt="" />
+                                                <img src={partner6} alt="" />
+                                                {/* <img src={partner1} alt="" /> */}
                                             </Marquee>
                                         </div>
                                     </div>
