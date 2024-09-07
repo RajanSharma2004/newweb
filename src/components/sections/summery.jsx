@@ -21,10 +21,10 @@ const Summery = () => {
                         <SlideUp>
                             <div className="about-content-part">
                                 <h2>
-                                    I’m Bentos Walker, a product designer.
+                                    I’m Rajan Sharma, a Brand Identity and UI/UX designer.
                                 </h2>
-                                <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual development. I have a diverse range of experience having worked across various fields and industries.</p>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                                <p>I am a Nepal-based Brand Identity and UI/UX designer with a strong focus on user-centric design, branding, and visual storytelling. With experience across diverse industries, I bring creativity and cultural depth to every project.</p>
+                                <p>My passion lies in creating unique visual identities that deeply resonate with both clients and their audiences, delivering memorable brand experiences that merge creativity with cultural relevance.</p>
                                 <div className="hero-btns">
                                     <a href="contact.html" className="theme-btn">Get In touch<i> <RiMailSendLine size={16} /> </i></a>
                                 </div>
