@@ -40,5 +40,5 @@ export const projectsData = [
         category: "Marketing",
         title: "Brand Identity and Motion Design"
     },
-
+    
 ]

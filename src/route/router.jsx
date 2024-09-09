@@ -4,8 +4,9 @@ import Home from "../pages/home";
 import Contact from "../pages/contact";
 import About from "../pages/about";
 import Service from "../pages/service";
-import SingleProject from "../pages/single-project";
+import SingleProject from "../pages/intenseteam";
 import Works from "../pages/works";
+
 
 
 export const router = createBrowserRouter([
@@ -30,7 +31,7 @@ export const router = createBrowserRouter([
                 element: <Service />
             },
             {
-                path: "/single-project",
+                path: "/intenseteam",
                 element: <SingleProject />
             },
             {

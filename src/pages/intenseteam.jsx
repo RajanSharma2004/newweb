@@ -31,15 +31,15 @@ const SingleProject = () => {
                             </div>
                             <div class="single-info">
                                 <p>Client</p>
-                                <h3>Bento Studio</h3>
+                                <h3>Vrit Technologies</h3>
                             </div>
                             <div class="single-info">
                                 <p>Services</p>
-                                <h3>Web Design</h3>
+                                <h3>Brand Identity Design</h3>
                             </div>
                             <div class="single-info">
                                 <p>Project</p>
-                                <h3>Creative</h3>
+                                <h3>Intense Team</h3>
                             </div>
                         </div>
                         {/* <!-- / END SINGLE LEFT DESIGN AREA --> */}
