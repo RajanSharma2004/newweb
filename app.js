@@ -11,7 +11,7 @@ const app = express();
 
 // Allow requests from localhost:5173 (or adjust for your frontend's URL)
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://newweb-alpha.vercel.app/'],
+  origin: ['http://localhost:5173', 'https://newweb-alpha.vercel.app'],
   methods: 'GET,POST'
 }));
 
