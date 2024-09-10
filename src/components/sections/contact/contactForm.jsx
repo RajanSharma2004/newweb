@@ -1,3 +1,4 @@
+// contactForm.jsx
 import React, { useState } from 'react';
 import { RiMailLine, RiUserLine } from '@remixicon/react';
 
@@ -60,7 +61,6 @@ const ContactForm = () => {
                 <label htmlFor="name" className="for-icon">
                   <i><RiUserLine size={20} /></i>
                 </label>
-                <div className="help-block with-errors"></div>
               </div>
             </div>
             <div className="col-md-6">
@@ -79,7 +79,6 @@ const ContactForm = () => {
                 <label htmlFor="email" className="for-icon">
                   <i><RiMailLine size={20} /></i>
                 </label>
-                <div className="help-block with-errors"></div>
               </div>
             </div>
             <div className="col-md-12">
@@ -95,7 +94,6 @@ const ContactForm = () => {
                   onChange={handleChange}
                   required
                 ></textarea>
-                <div className="help-block with-errors"></div>
               </div>
             </div>
             <div className="col-md-12">
@@ -103,7 +101,7 @@ const ContactForm = () => {
                 <button type="submit" className="theme-btn">
                   Send Message <i><RiMailLine size={15} /></i>
                 </button>
-                <div id="msgSubmit" className="hidden">{status}</div>
+                <div>{status}</div>
               </div>
             </div>
           </div>
