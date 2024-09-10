@@ -21,7 +21,7 @@ const ContactForm = () => {
     setError(null);
 
     try {
-      const response = await fetch('https://newweb-alpha.vercel.app//send', {
+      const response = await fetch('https://newweb-alpha.vercel.app/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
