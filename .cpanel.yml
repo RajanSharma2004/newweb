@@ -1,4 +1,5 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/designra/public_html/
+    - export DEPLOYPATH=/homedesignra/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    
