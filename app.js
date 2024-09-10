@@ -11,7 +11,7 @@ const app = express();
 
 // CORS configuration to allow both localhost and production
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://newweb-alpha.vercel.app'],
+  origin: ['https://newweb-alpha.vercel.app'],
   methods: 'GET,POST',
   credentials: true
 }));
