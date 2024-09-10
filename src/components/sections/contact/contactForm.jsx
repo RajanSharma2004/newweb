@@ -1,4 +1,3 @@
-// contactForm.jsx
 import React, { useState } from 'react';
 import { RiMailLine, RiUserLine } from '@remixicon/react';
 
@@ -9,6 +8,7 @@ const ContactForm = () => {
     message: '',
   });
   const [status, setStatus] = useState('');
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,6 +18,7 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('Sending...');
+    setError(null);
 
     try {
       const response = await fetch('http://localhost:5000/send', {
@@ -30,12 +31,15 @@ const ContactForm = () => {
 
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
+        setFormData({ name: '', email: '', message: '' }); // Reset form
       } else {
+        const data = await response.json();
+        setError(data.message || 'Failed to send message.');
         setStatus('Failed to send message.');
       }
     } catch (error) {
       console.error('Error sending message:', error);
+      setError('Error sending message. Please try again later.');
       setStatus('Error sending message.');
     }
   };
@@ -102,6 +106,7 @@ const ContactForm = () => {
                   Send Message <i><RiMailLine size={15} /></i>
                 </button>
                 <div>{status}</div>
+                {error && <div style={{ color: 'red' }}>{error}</div>}
               </div>
             </div>
           </div>

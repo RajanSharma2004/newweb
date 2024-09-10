@@ -34,7 +34,7 @@ async function sendMail(name, email, message) {
       service: 'gmail',
       auth: {
         type: 'OAuth2',
-        user: 'your-email@gmail.com', // Replace with your Gmail email
+        user: 'gdrajan.sharma@gmail.com', // Replace with your Gmail email
         clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
         clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
         refreshToken: process.env.GOOGLE_OAUTH_REFRESH_TOKEN,
@@ -44,7 +44,7 @@ async function sendMail(name, email, message) {
 
     const mailOptions = {
       from: `${name} <${email}>`,
-      to: 'your-email@gmail.com', // Replace with the email that should receive the message
+      to: 'gdrajan.sharma@gmail.com', // Replace with the email that should receive the message
       subject: `Message from ${name}`,
       text: message,
       html: `
