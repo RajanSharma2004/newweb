@@ -20,7 +20,7 @@ const ContactForm = () => {
     setStatus('Sending...');
 
     try {
-      const response = await fetch('https://your-backend-server.com/send', {  // Update with your backend URL
+      const response = await fetch('https://newweb-alpha.vercel.app/send', {  // Update with your backend URL
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
