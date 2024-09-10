@@ -1,4 +1,3 @@
-// app.js
 import express from 'express';
 import nodemailer from 'nodemailer';
 import cors from 'cors';
@@ -10,7 +9,7 @@ dotenv.config();
 
 const app = express();
 
-// Allow requests from localhost:5173
+// Allow requests from localhost:5173 (or adjust for your frontend's URL)
 app.use(cors({
   origin: 'http://localhost:5173',
   methods: 'GET,POST'
@@ -18,6 +17,7 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
+// Google OAuth2 client setup
 const oAuth2Client = new google.auth.OAuth2(
   process.env.GOOGLE_OAUTH_CLIENT_ID,
   process.env.GOOGLE_OAUTH_CLIENT_SECRET,
@@ -34,7 +34,7 @@ async function sendMail(name, email, message) {
       service: 'gmail',
       auth: {
         type: 'OAuth2',
-        user: 'your-email@gmail.com', // Replace with your email
+        user: 'your-email@gmail.com', // Replace with your Gmail email
         clientId: process.env.GOOGLE_OAUTH_CLIENT_ID,
         clientSecret: process.env.GOOGLE_OAUTH_CLIENT_SECRET,
         refreshToken: process.env.GOOGLE_OAUTH_REFRESH_TOKEN,
@@ -47,9 +47,11 @@ async function sendMail(name, email, message) {
       to: 'your-email@gmail.com', // Replace with the email that should receive the message
       subject: `Message from ${name}`,
       text: message,
-      html: `<p><strong>Name:</strong> ${name}</p>
-             <p><strong>Email:</strong> ${email}</p>
-             <p><strong>Message:</strong> ${message}</p>`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong> ${message}</p>
+      `,
     };
 
     const result = await transport.sendMail(mailOptions);
@@ -73,12 +75,13 @@ app.post('/send', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
 // Add a route to handle GET requests to the root URL
 app.get('/', (req, res) => {
   res.send('Backend is running. You should be submitting a form from the frontend.');
+});
+
+// Set the port number
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
